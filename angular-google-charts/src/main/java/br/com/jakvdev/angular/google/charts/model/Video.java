@@ -15,8 +15,8 @@ public class Video implements Serializable {
 
 	@XmlElement(name = "id")
 	private Long id;
-	@XmlElement(name = "category")
-	private Category category;
+	@XmlElement(name = "category_id")
+	private Long categoryId;
 	@XmlElement(name = "name")
 	private String name;
 	@XmlElement(name = "likeCount")
@@ -36,12 +36,12 @@ public class Video implements Serializable {
 		this.id = id;
 	}
 
-	public Category getCategory() {
-		return category;
+	public Long getCategory() {
+		return categoryId;
 	}
 
-	public void setCategory(Category category) {
-		this.category = category;
+	public void setCategory(Long categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	public String getName() {
