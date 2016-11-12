@@ -6,7 +6,7 @@ angular
 		videoService.getVideosByCategoryId(1)
 		.success(function(response){
 			$scope.videos = response.video;
-			console.log($scope.videos);
+			drawChart(response.video);
 		});
 		
 		videoService.getAllCategories()
@@ -18,7 +18,7 @@ angular
 			videoService.getVideosByCategoryId(category.categoryId)
 			.success(function(response){
 				$scope.videos = response.video;
-				console.log($scope.videos);
+				drawChart(response.video);
 			});
 		};
 }]);
