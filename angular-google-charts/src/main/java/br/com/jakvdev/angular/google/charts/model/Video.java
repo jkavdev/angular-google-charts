@@ -15,7 +15,7 @@ public class Video implements Serializable {
 
 	@XmlElement(name = "videoId")
 	private Long id;
-	@XmlElement(name = "category_id")
+	@XmlElement(name = "categoryId")
 	private Long categoryId;
 	@XmlElement(name = "videoName")
 	private String name;

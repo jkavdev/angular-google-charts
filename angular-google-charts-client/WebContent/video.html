@@ -1,1 +1,32 @@
-{{videos}}
+<div class="row">
+	<div class="col-sm-9">
+		<div class="main-content">Anya</div>
+		<div class="main-content">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Video Id</th>
+						<th>Category Id</th>
+						<th>Video Name</th>
+						<th>Like Count</th>
+						<th>Dislike Count</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="video in videos">
+						<td>{{video.videoId}}</td>
+						<td>{{video.categoryId}}</td>
+						<td>{{video.videoName}}</td>
+						<td>{{video.likeCount}}</td>
+						<td>{{video.dislikeCount}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<ul ng-repeat="category in categories">
+			<li ng-click="getVideosByCategoryId(category)">{{category.categoryName}}</li>
+		</ul>
+	</div>
+</div>
