@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="videoManagement">
+	<head>
+		<meta charset="UTF-8">
+		<title>Index</title>
+		<link type="text/css" rel="stylesheet" href="resources/css/bootstrap.min.css">
+	</head>
+	<body>
+	
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<span class="navbar-brand">Video Management</span>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li><a href="#video">Video</a></li>
+						<li><a href="#category">Category</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	
+		<div class="container-fluid">
+			<ng-view />
+		</div>
+	
+		<script type="text/javascript" src="resources/js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="resources/js/lib/angular-route.min.js"></script>
+		<script type="text/javascript" src="resources/js/controller/app-config.js"></script>
+		<script type="text/javascript" src="resources/js/service/video-service.js"></script>
+		<script type="text/javascript" src="resources/js/controller/video-controller.js"></script>
+		<script type="text/javascript" src="resources/js/controller/category-controller.js"></script>
+	</body>
+</html>
