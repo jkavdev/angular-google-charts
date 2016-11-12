@@ -23,7 +23,7 @@ public class CategoryDaoImpl {
 		List<Category> categories = new ArrayList<>();
 
 		try {
-			properties.load(this.getClass().getResourceAsStream("/mysql/database/properties"));
+			properties.load(this.getClass().getResourceAsStream("/mysql/database.properties"));
 
 			Class.forName(properties.getProperty("driver_class"));
 
@@ -37,8 +37,8 @@ public class CategoryDaoImpl {
 			
 			while(resultSet.next()){
 				Category category = new Category();
-				category.setId(resultSet.getLong("id"));
-				category.setName(resultSet.getString("name"));
+				category.setId(resultSet.getLong("categoryId"));
+				category.setName(resultSet.getString("categoryName"));
 				
 				categories.add(category);
 			}

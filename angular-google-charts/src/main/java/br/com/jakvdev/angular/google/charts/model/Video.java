@@ -13,11 +13,11 @@ public class Video implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@XmlElement(name = "id")
+	@XmlElement(name = "videoId")
 	private Long id;
 	@XmlElement(name = "category_id")
 	private Long categoryId;
-	@XmlElement(name = "name")
+	@XmlElement(name = "videoName")
 	private String name;
 	@XmlElement(name = "likeCount")
 	private Integer likeCount;

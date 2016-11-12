@@ -13,9 +13,9 @@ public class Category implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	@XmlElement(name = "id")
+	@XmlElement(name = "categoryId")
 	private Long id;
-	@XmlElement(name = "name")
+	@XmlElement(name = "categoryName")
 	private String name;
 
 	public Category() {

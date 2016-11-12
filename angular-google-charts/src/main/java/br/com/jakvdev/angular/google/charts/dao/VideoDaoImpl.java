@@ -39,8 +39,8 @@ public class VideoDaoImpl {
 			
 			while(resultSet.next()){
 				Video video = new Video();
-				video.setId(resultSet.getLong("id"));
-				video.setName(resultSet.getString("name"));
+				video.setId(resultSet.getLong("videoId"));
+				video.setName(resultSet.getString("videoName"));
 				video.setCategory(resultSet.getLong("category_id"));
 				video.setLikeCount(resultSet.getInt("like_count"));
 				video.setDislikeCount(resultSet.getInt("dislike_count"));
