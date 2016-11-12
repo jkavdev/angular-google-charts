@@ -16,12 +16,13 @@ import br.com.jakvdev.angular.google.charts.model.Video;
 public class VideoResource {
 
 	@GET
-	@Path("/getvideosbycateogryid")
+	@Path("/getvideosbycategoryid")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	private List<Video> getVideosByCategoryId(@QueryParam("categoryId") long categoryId) {
+	public List<Video> getVideosByCategoryId(
+			@QueryParam("categoryId") int categoryId) {
 		VideoDaoImpl videoDaoImpl = new VideoDaoImpl();
-		return videoDaoImpl.getVideosByCategoryId(categoryId);
+		return videoDaoImpl.getVideosByCategoryId((long)categoryId);
 	}
 
 }

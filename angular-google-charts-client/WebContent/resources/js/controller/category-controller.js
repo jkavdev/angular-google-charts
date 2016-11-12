@@ -1,6 +1,10 @@
 angular
 .module('videoManagement')
-.controller('categoryController', ['$scope',
-	function($scope) {
-	$scope.anya = 'Category';
+.controller('categoryController', 
+['$scope', 'videoService', 
+	function($scope, videoService) {
+		videoService.getAllCategories()
+		.success(function(response){
+			$scope.categories = response.category;
+		});
 }]);

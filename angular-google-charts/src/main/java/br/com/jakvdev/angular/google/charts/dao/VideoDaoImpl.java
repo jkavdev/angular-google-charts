@@ -23,7 +23,7 @@ public class VideoDaoImpl {
 		List<Video> videos = new ArrayList<>();
 
 		try {
-			properties.load(this.getClass().getResourceAsStream("/mysql/database/properties"));
+			properties.load(this.getClass().getResourceAsStream("/mysql/database.properties"));
 
 			Class.forName(properties.getProperty("driver_class"));
 
@@ -32,7 +32,7 @@ public class VideoDaoImpl {
 					properties.getProperty("username"),
 					properties.getProperty("password"));
 			
-			String sql = "select * from video where categoria_id = ?";
+			String sql = "select * from video where categoryId = ?";
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setLong(1, id);
 			resultSet = preparedStatement.executeQuery();
@@ -41,7 +41,7 @@ public class VideoDaoImpl {
 				Video video = new Video();
 				video.setId(resultSet.getLong("videoId"));
 				video.setName(resultSet.getString("videoName"));
-				video.setCategory(resultSet.getLong("category_id"));
+				video.setCategory(resultSet.getLong("categoryId"));
 				video.setLikeCount(resultSet.getInt("like_count"));
 				video.setDislikeCount(resultSet.getInt("dislike_count"));
 				
