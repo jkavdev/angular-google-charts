@@ -21,8 +21,7 @@ public class VideoResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Video> getVideosByCategoryId(
 			@QueryParam("categoryId") int categoryId) {
-		VideoDaoImpl videoDaoImpl = new VideoDaoImpl();
-		return videoDaoImpl.getVideosByCategoryId((long)categoryId);
+		return new VideoDaoImpl().getVideosByCategoryId((long)categoryId);
 	}
 
 }

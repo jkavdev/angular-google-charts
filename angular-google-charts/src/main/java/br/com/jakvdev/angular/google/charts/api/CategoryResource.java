@@ -17,8 +17,7 @@ public class CategoryResource {
 	@Path("/getallcategories")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Category> getAllCategories() {
-		CategoryDaoImpl categoryDaoImpl = new CategoryDaoImpl();
-		return categoryDaoImpl.getAllCategories();
+		return new CategoryDaoImpl().getAllCategories();
 	}
 
 }
